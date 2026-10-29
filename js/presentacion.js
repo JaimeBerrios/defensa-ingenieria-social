@@ -1,4 +1,4 @@
-// Usa data-expositor="Nombre" en cada lámina; "grupo" toma el valor de datos/datos.md.
+// Usa data-expositor="Nombre" en cada lámina; "grupo" toma el valor de span[data-campo="Grupo"] en el HTML.
 function integrarNumeroPagina() {
   const pieDer = document.querySelector(".pie-der");
   const slideNum = document.querySelector(".slide-number");

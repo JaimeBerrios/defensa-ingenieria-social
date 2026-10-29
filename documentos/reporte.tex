@@ -1,0 +1,126 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fontspec}
+\usepackage[spanish,es-noshorthands,es-tabla,es-lcroman]{babel}
+\usepackage{../plantilla/latex/unab_reporte}
+
+% Los datos compartidos se generan desde datos/datos.md al ejecutar compilar.py.
+\input{../.build/datos.tex}
+\input{../.build/citas.tex}
+\hypersetup{pdftitle={\TituloTrabajo},pdfauthor={\NombreFirma}}
+
+\begin{document}
+\portadareporte
+\pagenumbering{roman}
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+Escribe aquí una síntesis del reporte: el problema abordado, el objetivo,
+la metodología utilizada, los principales resultados y la conclusión central.
+Redacta este apartado cuando hayas terminado el desarrollo del documento.
+
+\textbf{Palabras clave:} tema; concepto; área de estudio.
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\section{Introducción}
+Presenta el tema, su contexto y su importancia. Describe el problema o la
+pregunta que motiva el trabajo, el alcance del reporte y cómo está organizado.
+Reemplaza todos los textos de orientación con el contenido de tu investigación.
+
+\section{Objetivos}
+\subsection{Objetivo general}
+Expresa el propósito principal del trabajo con un verbo en infinitivo.
+\subsection{Objetivos específicos}
+\begin{itemize}
+  \item Identificar los elementos principales del problema de estudio.
+  \item Analizar la información recopilada mediante criterios definidos.
+  \item Proponer recomendaciones a partir de los resultados obtenidos.
+\end{itemize}
+
+\section{Marco teórico}
+\subsection{Conceptos fundamentales}
+Desarrolla las definiciones y los antecedentes necesarios para comprender el
+tema. Respalda las afirmaciones con fuentes y citas, por ejemplo~\cita{fuente}.
+La referencia incluida al final es un modelo que debes reemplazar.
+\subsection{Antecedentes}
+Describe los trabajos previos y explica su relación con el problema estudiado.
+
+\section{Metodología}
+Explica el enfoque del trabajo, las fuentes de información, los instrumentos
+utilizados y el procedimiento seguido. Indica los criterios de selección y
+las limitaciones para que el proceso pueda comprenderse y reproducirse.
+
+\section{Resultados y análisis}
+\subsection{Presentación de resultados}
+Expón los hallazgos de forma ordenada. La tabla~\ref{tab:resultados} muestra
+una estructura de ejemplo; sustituye las filas con tus datos.
+\begin{table}[htbp]
+  \centering
+  \caption{Síntesis de resultados (ejemplo de estructura)}
+  \label{tab:resultados}
+  \begin{tabularx}{\linewidth}{@{}lXX@{}}
+    \toprule
+    \textbf{Criterio} & \textbf{Resultado} & \textbf{Interpretación} \\
+    \midrule
+    Criterio 1 & Describe el hallazgo. & Explica su significado. \\
+    Criterio 2 & Describe el hallazgo. & Relación con el objetivo. \\
+    Criterio 3 & Describe el hallazgo. & Implicaciones principales. \\
+    \bottomrule
+  \end{tabularx}
+  \par\smallskip {\small Fuente: elaboración propia.}
+\end{table}
+
+\subsection{Discusión}
+Interpreta los resultados y contrástalos con el marco teórico. Distingue entre
+los datos observados y tus interpretaciones. Explica las limitaciones del análisis.
+
+% Para destacar una nota u observación importante, usa:
+% \begin{cajanota}[Nota metodológica]
+%   Escribe aquí el texto destacado, hallazgo o consideración relevante.
+% \end{cajanota}
+
+% Para insertar un bloque de código fuente con estilo UNAB, descomenta:
+% \begin{lstlisting}[language=Python, caption={Ejemplo de procesamiento de datos}]
+% def procesar_datos(registros):
+%     return [item.strip() for item in registros if item]
+% \end{lstlisting}
+
+% Para insertar una figura, guarda el archivo en assets/contenido/imagenes/ y descomenta:
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\linewidth]{../assets/contenido/imagenes/resultado.png}
+%   \caption{Descripción de la figura. Fuente: elaboración propia.}
+%   \label{fig:resultado}
+% \end{figure}
+
+\section{Conclusiones}
+Responde al objetivo general y sintetiza los hallazgos principales. Explica
+qué se puede concluir a partir de la evidencia presentada, sin introducir
+resultados nuevos.
+
+\section{Recomendaciones}
+Propón acciones concretas derivadas de las conclusiones. Señala responsables,
+condiciones o líneas de investigación futura cuando corresponda.
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Referencias}
+\section*{Referencias}
+\begin{doublespace}
+\input{../.build/referencias-reporte.tex}
+\end{doublespace}
+
+\clearpage
+\appendix
+\section{Material complementario}
+Incluye instrumentos, datos adicionales, evidencias u otros materiales que
+complementen el reporte. Elimina esta sección si no necesitas anexos.
+
+% ==============================================================================
+% FIRMA INSTITUCIONAL: Se imprime obligatoriamente al final de todo el reporte,
+% después de los anexos (o tras las referencias si no hay anexos).
+% Consérvala siempre en el documento final.
+% ==============================================================================
+\firmareporte
+\end{document}

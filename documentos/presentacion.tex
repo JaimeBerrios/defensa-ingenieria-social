@@ -1,0 +1,201 @@
+\documentclass[10pt, aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{../plantilla/latex/unab_presentacion}
+
+% Los datos compartidos se generan desde datos/datos.md al ejecutar compilar.py.
+\input{../.build/datos.tex}
+\input{../.build/citas.tex}
+\title{\TituloTrabajo}
+\author{\Grupo}
+\hypersetup{pdftitle={\TituloTrabajo},pdfauthor={\Grupo}}
+\setdatosfooter{\TituloCorto}{\Asignatura}
+
+\begin{document}
+
+% =========================================================
+% Lámina 1: Portada
+% =========================================================
+\portadainstitucional
+
+% =========================================================
+% Lámina 2: Reflexión
+% =========================================================
+\expositor{\Grupo}
+\begin{frame}{\faLightbulb \ Reflexión Inicial}
+  \begin{center}
+    \vfill
+    \IfFileExists{../assets/contenido/imagenes/reflexion.png}{%
+      \includegraphics[width=0.75\linewidth, height=0.75\textheight, keepaspectratio]{../assets/contenido/imagenes/reflexion.png}
+    }{%
+      \makebox[\textwidth][c]{%
+        \begin{beamercolorbox}[rounded=true,wd=0.78\textwidth,sep=0.45cm,center]{block body}
+          \Large\textcolor{unabblue}{\faLightbulb}\\[0.25cm]
+          \large ¿Qué problema queremos resolver y por qué importa?
+        \end{beamercolorbox}%
+      }
+    }
+    \vfill
+  \end{center}
+\end{frame}
+
+% =========================================================
+% Lámina 3: Conceptos
+% =========================================================
+\expositor{\Grupo}
+\begin{frame}{\faInfoCircle \ Conceptos Fundamentales}
+  \begin{block}{Concepto principal}
+    Escribe aquí la definición central del tema. Mantén una idea clara, breve y orientada a la exposición oral. Ejemplo de cita: \cita{fuente}.
+  \end{block}
+
+  \begin{columns}[onlytextwidth]
+    \column{0.48\textwidth}
+    \begin{itemize}
+      \item \textbf{\faCheckCircle \ Punto 1:} descripción breve.
+      \item \textbf{\faCheckCircle \ Punto 2:} descripción breve.
+    \end{itemize}
+    \column{0.48\textwidth}
+    \begin{itemize}
+      \item \textbf{\faCheckCircle \ Punto 3:} descripción breve.
+      \item \textbf{\faCheckCircle \ Punto 4:} descripción breve.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+% =========================================================
+% Lámina 4: Desarrollo
+% (Nota: si agregas código fuente con lstlisting en un frame, usa \begin{frame}[fragile]{Título})
+% =========================================================
+\expositor{\Grupo}
+\begin{frame}{\faMicrochip \ Desarrollo del Tema}
+  \begin{block}{Idea operativa}
+    Explica aquí cómo funciona el tema, qué componentes intervienen y por qué es importante.
+  \end{block}
+
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Subtema A}
+      \begin{itemize}
+        \item Característica principal.
+        \item Ventaja o aplicación.
+        \item Ejemplo breve.
+      \end{itemize}
+    \end{exampleblock}
+    \column{0.48\textwidth}
+    \begin{exampleblock}{Subtema B}
+      \begin{itemize}
+        \item Característica principal.
+        \item Ventaja o aplicación.
+        \item Ejemplo breve.
+      \end{itemize}
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% =========================================================
+% Lámina 5: Casos de uso
+% =========================================================
+\expositor{\Grupo}
+\begin{frame}{\faBriefcase \ Aplicaciones y Casos de Uso}
+  \begin{block}{Dónde se aplica}
+    \begin{itemize}
+      \item \textbf{\faBriefcase \ Caso 1:} descripción del caso de uso.
+      \item \textbf{\faCogs \ Caso 2:} descripción del caso de uso.
+      \item \textbf{\faUsers \ Caso 3:} descripción del caso de uso.
+      \item \textbf{\faChartLine \ Caso 4:} descripción del caso de uso.
+    \end{itemize}
+  \end{block}
+
+  \begin{center}
+    \textcolor{unabblue}{\Large \faLightbulb \quad \faProjectDiagram \quad \faClipboardCheck \quad \faChartBar}
+  \end{center}
+\end{frame}
+
+% =========================================================
+% Lámina 6: Comparativa
+% =========================================================
+\expositor{\Grupo}
+\begin{frame}{\faBalanceScale \ Análisis Comparativo}
+  \begin{columns}[T, onlytextwidth]
+    \column{0.48\textwidth}
+    \begin{block}{\faArrowLeft \ Enfoque A}
+      \begin{itemize}
+        \item \textbf{Criterio 1:} descripción.
+        \item \textbf{Criterio 2:} descripción.
+        \item \textbf{Criterio 3:} descripción.
+        \item \textbf{Criterio 4:} descripción.
+      \end{itemize}
+    \end{block}
+
+    \column{0.48\textwidth}
+    \begin{block}{\faArrowRight \ Enfoque B}
+      \begin{itemize}
+        \item \textbf{Criterio 1:} descripción.
+        \item \textbf{Criterio 2:} descripción.
+        \item \textbf{Criterio 3:} descripción.
+        \item \textbf{Criterio 4:} descripción.
+      \end{itemize}
+    \end{block}
+  \end{columns}
+
+  \vspace{0.35cm}
+  \begin{center}
+    \begin{beamercolorbox}[rounded=true, wd=0.8\textwidth, sep=0.12cm, center]{block body}
+      \footnotesize \textcolor{unabblue}{\faLightbulb \ \textbf{Punto clave:}} escribe aquí la conclusión de la comparativa.
+    \end{beamercolorbox}
+  \end{center}
+\end{frame}
+
+% =========================================================
+% Lámina 7: Conclusiones
+% =========================================================
+\expositor{\Grupo}
+\begin{frame}{\faCheckCircle \ Conclusiones Estratégicas}
+  \begin{block}{Idea final}
+    Resume aquí el mensaje más importante de la exposición.
+  \end{block}
+
+  \begin{columns}[T]
+    \column{0.48\textwidth}
+    \begin{exampleblock}{\faBullhorn \ Conclusión 1}
+      \footnotesize
+      \begin{itemize}
+        \item Argumento de cierre.
+        \item Beneficio principal.
+        \item Aplicación práctica.
+      \end{itemize}
+    \end{exampleblock}
+
+    \column{0.48\textwidth}
+    \begin{exampleblock}{\faTools \ Conclusión 2}
+      \footnotesize
+      \begin{itemize}
+        \item Argumento de cierre.
+        \item Beneficio principal.
+        \item Aplicación práctica.
+      \end{itemize}
+    \end{exampleblock}
+  \end{columns}
+\end{frame}
+
+% =========================================================
+% Lámina 8: Referencias
+% =========================================================
+\expositor{\Grupo}
+\begin{frame}{\faBook \ Referencias Bibliográficas}
+  \begin{block}{Fuentes consultadas}
+    \justifying
+    \footnotesize
+    Agrega aquí las fuentes consultadas para respaldar la exposición.
+  \end{block}
+
+  \input{../.build/referencias-presentacion.tex}
+\end{frame}
+
+% =========================================================
+% Lámina 9: Cierre
+% =========================================================
+\cierreinstitucional[Muchas gracias por su atención]
+
+\end{document}

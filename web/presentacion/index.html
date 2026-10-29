@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Título del proyecto</title>
+  <link rel="icon" type="image/png" href="../../assets/institucional/isotipo-blanco.png">
+  <link rel="stylesheet" href="../../vendor/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../vendor/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../vendor/reveal.js/dist/theme/white.css">
+  <link rel="stylesheet" href="../../vendor/reveal.js/dist/plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="css/unab.css">
+  <!-- Ajustes propios de esta presentación; se conserva el tema compartido. -->
+  <link rel="stylesheet" href="css/presentacion.css">
+</head>
+<body>
+  <!-- Font Awesome Free 6.7.2 by @fontawesome — https://fontawesome.com
+       Icons licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+       Original SVG paths: https://github.com/FortAwesome/Font-Awesome/tree/6.7.2/svgs/solid
+       Embedded selection for offline use; no external icon requests. -->
+  <svg class="biblioteca-iconos" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><symbol id="fa-arrow-right" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol><symbol id="fa-book-open" viewBox="0 0 576 512"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z"/></symbol><symbol id="fa-book" viewBox="0 0 448 512"><path d="M96 0C43 0 0 43 0 96L0 416c0 53 43 96 96 96l288 0 32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L384 0 96 0zm0 384l256 0 0 64L96 448c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16zm16 48l192 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-192 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></symbol><symbol id="fa-calendar-days" viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/></symbol><symbol id="fa-chart-column" viewBox="0 0 512 512"><path d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zM160 224c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm128-64l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-17.7 14.3-32 32-32s32 14.3 32 32zm64 32c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zM480 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-224c0-17.7 14.3-32 32-32s32 14.3 32 32z"/></symbol><symbol id="fa-circle-check" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></symbol><symbol id="fa-circle-question" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3l58.3 0c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24l0-13.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1l-58.3 0c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></symbol><symbol id="fa-comments" viewBox="0 0 640 512"><path d="M208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 38.6 14.7 74.3 39.6 103.4c-3.5 9.4-8.7 17.7-14.2 24.7c-4.8 6.2-9.7 11-13.3 14.3c-1.8 1.6-3.3 2.9-4.3 3.7c-.5 .4-.9 .7-1.1 .8l-.2 .2s0 0 0 0s0 0 0 0C1 327.2-1.4 334.4 .8 340.9S9.1 352 16 352c21.8 0 43.8-5.6 62.1-12.5c9.2-3.5 17.8-7.4 25.2-11.4C134.1 343.3 169.8 352 208 352zM448 176c0 112.3-99.1 196.9-216.5 207C255.8 457.4 336.4 512 432 512c38.2 0 73.9-8.7 104.7-23.9c7.5 4 16 7.9 25.2 11.4c18.3 6.9 40.3 12.5 62.1 12.5c6.9 0 13.1-4.5 15.2-11.1c2.1-6.6-.2-13.8-5.8-17.9c0 0 0 0 0 0s0 0 0 0l-.2-.2c-.2-.2-.6-.4-1.1-.8c-1-.8-2.5-2-4.3-3.7c-3.6-3.3-8.5-8.1-13.3-14.3c-5.5-7-10.7-15.4-14.2-24.7c24.9-29 39.6-64.7 39.6-103.4c0-92.8-84.9-168.9-192.6-175.5c.4 5.1 .6 10.3 .6 15.5z"/></symbol><symbol id="fa-expand" viewBox="0 0 448 512"><path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/></symbol><symbol id="fa-flag-checkered" viewBox="0 0 448 512"><path d="M32 0C49.7 0 64 14.3 64 32l0 16 69-17.2c38.1-9.5 78.3-5.1 113.5 12.5c46.3 23.2 100.8 23.2 147.1 0l9.6-4.8C423.8 28.1 448 43.1 448 66.1l0 279.7c0 13.3-8.3 25.3-20.8 30l-34.7 13c-46.2 17.3-97.6 14.6-141.7-7.4c-37.9-19-81.3-23.7-122.5-13.4L64 384l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-80 0-66L0 64 0 32C0 14.3 14.3 0 32 0zM64 187.1l64-13.9 0 65.5L64 252.6 64 318l48.8-12.2c5.1-1.3 10.1-2.4 15.2-3.3l0-63.9 38.9-8.4c8.3-1.8 16.7-2.5 25.1-2.1l0-64c13.6 .4 27.2 2.6 40.4 6.4l23.6 6.9 0 66.7-41.7-12.3c-7.3-2.1-14.8-3.4-22.3-3.8l0 71.4c21.8 1.9 43.3 6.7 64 14.4l0-69.8 22.7 6.7c13.5 4 27.3 6.4 41.3 7.4l0-64.2c-7.8-.8-15.6-2.3-23.2-4.5l-40.8-12 0-62c-13-3.8-25.8-8.8-38.2-15c-8.2-4.1-16.9-7-25.8-8.8l0 72.4c-13-.4-26 .8-38.7 3.6L128 173.2 128 98 64 114l0 73.1zM320 335.7c16.8 1.5 33.9-.7 50-6.8l14-5.2 0-71.7-7.9 1.8c-18.4 4.3-37.3 5.7-56.1 4.5l0 77.4zm64-149.4l0-70.8c-20.9 6.1-42.4 9.1-64 9.1l0 69.4c13.9 1.4 28 .5 41.7-2.6l22.3-5.2z"/></symbol><symbol id="fa-gears" viewBox="0 0 640 512"><path d="M308.5 135.3c7.1-6.3 9.9-16.2 6.2-25c-2.3-5.3-4.8-10.5-7.6-15.5L304 89.4c-3-5-6.3-9.9-9.8-14.6c-5.7-7.6-15.7-10.1-24.7-7.1l-28.2 9.3c-10.7-8.8-23-16-36.2-20.9L199 27.1c-1.9-9.3-9.1-16.7-18.5-17.8C173.9 8.4 167.2 8 160.4 8l-.7 0c-6.8 0-13.5 .4-20.1 1.2c-9.4 1.1-16.6 8.6-18.5 17.8L115 56.1c-13.3 5-25.5 12.1-36.2 20.9L50.5 67.8c-9-3-19-.5-24.7 7.1c-3.5 4.7-6.8 9.6-9.9 14.6l-3 5.3c-2.8 5-5.3 10.2-7.6 15.6c-3.7 8.7-.9 18.6 6.2 25l22.2 19.8C32.6 161.9 32 168.9 32 176s.6 14.1 1.7 20.9L11.5 216.7c-7.1 6.3-9.9 16.2-6.2 25c2.3 5.3 4.8 10.5 7.6 15.6l3 5.2c3 5.1 6.3 9.9 9.9 14.6c5.7 7.6 15.7 10.1 24.7 7.1l28.2-9.3c10.7 8.8 23 16 36.2 20.9l6.1 29.1c1.9 9.3 9.1 16.7 18.5 17.8c6.7 .8 13.5 1.2 20.4 1.2s13.7-.4 20.4-1.2c9.4-1.1 16.6-8.6 18.5-17.8l6.1-29.1c13.3-5 25.5-12.1 36.2-20.9l28.2 9.3c9 3 19 .5 24.7-7.1c3.5-4.7 6.8-9.5 9.8-14.6l3.1-5.4c2.8-5 5.3-10.2 7.6-15.5c3.7-8.7 .9-18.6-6.2-25l-22.2-19.8c1.1-6.8 1.7-13.8 1.7-20.9s-.6-14.1-1.7-20.9l22.2-19.8zM112 176a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM504.7 500.5c6.3 7.1 16.2 9.9 25 6.2c5.3-2.3 10.5-4.8 15.5-7.6l5.4-3.1c5-3 9.9-6.3 14.6-9.8c7.6-5.7 10.1-15.7 7.1-24.7l-9.3-28.2c8.8-10.7 16-23 20.9-36.2l29.1-6.1c9.3-1.9 16.7-9.1 17.8-18.5c.8-6.7 1.2-13.5 1.2-20.4s-.4-13.7-1.2-20.4c-1.1-9.4-8.6-16.6-17.8-18.5L583.9 307c-5-13.3-12.1-25.5-20.9-36.2l9.3-28.2c3-9 .5-19-7.1-24.7c-4.7-3.5-9.6-6.8-14.6-9.9l-5.3-3c-5-2.8-10.2-5.3-15.6-7.6c-8.7-3.7-18.6-.9-25 6.2l-19.8 22.2c-6.8-1.1-13.8-1.7-20.9-1.7s-14.1 .6-20.9 1.7l-19.8-22.2c-6.3-7.1-16.2-9.9-25-6.2c-5.3 2.3-10.5 4.8-15.6 7.6l-5.2 3c-5.1 3-9.9 6.3-14.6 9.9c-7.6 5.7-10.1 15.7-7.1 24.7l9.3 28.2c-8.8 10.7-16 23-20.9 36.2L315.1 313c-9.3 1.9-16.7 9.1-17.8 18.5c-.8 6.7-1.2 13.5-1.2 20.4s.4 13.7 1.2 20.4c1.1 9.4 8.6 16.6 17.8 18.5l29.1 6.1c5 13.3 12.1 25.5 20.9 36.2l-9.3 28.2c-3 9-.5 19 7.1 24.7c4.7 3.5 9.5 6.8 14.6 9.8l5.4 3.1c5 2.8 10.2 5.3 15.5 7.6c8.7 3.7 18.6 .9 25-6.2l19.8-22.2c6.8 1.1 13.8 1.7 20.9 1.7s14.1-.6 20.9-1.7l19.8 22.2zM464 304a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></symbol><symbol id="fa-laptop-code" viewBox="0 0 640 512"><path d="M64 96c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 256-64 0 0-256L128 96l0 256-64 0L64 96zM0 403.2C0 392.6 8.6 384 19.2 384l601.6 0c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8L76.8 480C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></symbol><symbol id="fa-lightbulb" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2c0 0 0 0 0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4c0 0 0 0 0 0c19.8 27.1 39.7 54.4 49.2 86.2l160 0zM192 512c44.2 0 80-35.8 80-80l0-16-160 0 0 16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></symbol><symbol id="fa-list" viewBox="0 0 512 512"><path d="M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z"/></symbol><symbol id="fa-rotate-left" viewBox="0 0 512 512"><path d="M48.5 224L40 224c-13.3 0-24-10.7-24-24L16 72c0-9.7 5.8-18.5 14.8-22.2s19.3-1.7 26.2 5.2L98.6 96.6c87.6-86.5 228.7-86.2 315.8 1c87.5 87.5 87.5 229.3 0 316.8s-229.3 87.5-316.8 0c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0c62.5 62.5 163.8 62.5 226.3 0s62.5-163.8 0-226.3c-62.2-62.2-162.7-62.5-225.3-1L185 183c6.9 6.9 8.9 17.2 5.2 26.2s-12.5 14.8-22.2 14.8L48.5 224z"/></symbol><symbol id="fa-scale-balanced" viewBox="0 0 640 512"><path d="M384 32l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L398.4 96c-5.2 25.8-22.9 47.1-46.4 57.3L352 448l160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0-192 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l160 0 0-294.7c-23.5-10.3-41.2-31.6-46.4-57.3L128 96c-17.7 0-32-14.3-32-32s14.3-32 32-32l128 0c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288l144.9 0L512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416zM126.8 195.8L54.4 320l144.9 0L126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1z"/></symbol></defs></svg>
+  <!-- compilar.py sincroniza data-campo e integrantes; edita libremente las láminas. -->
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Lámina 1: Portada (Horizontal) -->
+      <section id="portada" class="portada" data-expositor="" data-transition="fade">
+        <div class="logos">
+          <img src="../../assets/institucional/isotipo-azul.png" alt="Universidad Dr. Andrés Bello">
+          <img src="../../assets/institucional/logo-facultad.png" alt="Facultad de Tecnología e Innovación">
+        </div>
+        <p class="institucion"><span data-campo="Institución">Universidad Dr. Andrés Bello</span> &bull; <span data-campo="Facultad">Facultad de Tecnología e Innovación</span></p>
+        <h1><span data-campo="Título">Título del proyecto</span></h1>
+        <p class="subtitulo"><span data-campo="Subtítulo">Una idea central para desarrollar</span></p>
+        <div class="datos-portada">
+          <p><strong>Asignatura:</strong> <span data-campo="Asignatura">Nombre de la asignatura</span></p>
+          <p><strong>Docente:</strong> <span data-campo="Docente">Nombre del docente</span></p>
+          <p><strong>Grupo:</strong> <span data-campo="Grupo">Grupo 01</span></p>
+        </div>
+        <table class="integrantes">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Código</th>
+            </tr>
+          </thead>
+          <tbody id="integrantes">
+<tr><td>Nombre completo</td><td>Código</td></tr>
+<tr><td>Nombre completo</td><td>Código</td></tr>
+<tr><td>Nombre completo</td><td>Código</td></tr>
+</tbody>
+        </table>
+        <div class="lugar">
+          <span><span data-campo="Lugar y fecha">San Miguel, fecha de entrega</span></span>
+          <img src="../../assets/institucional/acreditacion.png" alt="Acreditación institucional">
+        </div>
+        <aside class="notes">Presenta al grupo y el título. Explica en una frase el propósito del trabajo. Sustituye los datos de ejemplo antes de exponer.</aside>
+      </section>
+
+      <!-- Lámina 2: Reflexión (Horizontal) -->
+      <section class="institucional-oscura" data-background-color="#173864" data-state="fondo-institucional" id="reflexion" data-expositor="grupo" data-transition="fade">
+        <h2><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-lightbulb"></use></svg><span>Reflexión Inicial</span></h2>
+        <p class="etiqueta">Una pregunta para comenzar</p>
+        <p class="pregunta">¿Qué problema queremos resolver y por qué importa?</p>
+        <aside class="notes">
+          Presentar el contexto de partida, despertar el interés del jurado y la audiencia planteando la motivación del trabajo.
+        </aside>
+      </section>
+
+      <!-- Lámina 3: Conceptos (Horizontal) -->
+      <section id="conceptos" data-expositor="grupo" data-transition="fade">
+        <h2><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-book-open"></use></svg><span>Conceptos Fundamentales</span></h2>
+        <!-- Modelo de cita: reemplazar texto y fuente juntos; no atribuir esta guía al autor de ejemplo. -->
+        <blockquote class="cita-destacada">
+          <p>«Inserta aquí una cita breve y verificada que explique el concepto principal».</p>
+          <footer>Modelo pendiente de sustituir · <span data-cita="fuente">(Apellido, Año)</span></footer>
+        </blockquote>
+        <div class="columnas">
+          <div class="bloque">
+            <ul>
+              <li><strong>Punto 1:</strong> descripción breve.</li>
+              <li><strong>Punto 2:</strong> descripción breve.</li>
+            </ul>
+          </div>
+          <div class="bloque">
+            <ul>
+              <li><strong>Punto 3:</strong> descripción breve.</li>
+              <li><strong>Punto 4:</strong> descripción breve.</li>
+            </ul>
+          </div>
+        </div>
+        <aside class="notes">Define el concepto con tus propias palabras y da un ejemplo breve. Explica cómo se relacionan los cuatro puntos. Menciona la fuente y reemplaza la referencia de ejemplo.</aside>
+      </section>
+
+        <!-- Lámina 4: Desarrollo -->
+        <section id="desarrollo" data-auto-animate data-auto-animate-id="proceso" data-auto-animate-duration="0.45" data-expositor="grupo" data-transition="fade">
+          <h2><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-gears"></use></svg><span>Desarrollo del Tema</span></h2>
+          <p class="etiqueta">Avanza con → para destacar entrada, proceso y resultado.</p>
+          <ol data-id="flujo" class="proceso" aria-label="Esquema del proceso: entrada, transformación y resultado">
+            <li class="fragment custom foco" data-fragment-index="0" data-id="paso-01"><strong>01 · Entrada</strong>¿Qué información o recursos se necesitan?</li>
+            <li class="fragment custom foco" data-fragment-index="1" data-id="paso-02"><strong>02 · Proceso</strong>¿Qué pasos transforman esos recursos?</li>
+            <li class="fragment custom foco" data-fragment-index="2" data-id="paso-03"><strong>03 · Resultado</strong>¿Qué se obtiene y cómo se comprueba?</li>
+          </ol>
+          <p class="clave"><strong>Idea operativa:</strong> relaciona cada paso con el objetivo del trabajo.</p>
+          <aside class="notes">Recorre entrada, proceso y resultado en ese orden. Adapta el esquema al tema y explica qué evidencia permite comprobar el resultado. Evita presentar pasos todavía no realizados como hechos.</aside>
+      </section>
+
+        <!-- Lámina 5: Casos de uso -->
+        <section id="aplicaciones" data-auto-animate data-auto-animate-id="proceso" data-auto-animate-duration="0.45" data-expositor="grupo" data-transition="fade">
+          <h2><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-laptop-code"></use></svg><span>Aplicaciones y Casos de Uso</span></h2>
+          <ol class="proceso compacto" data-id="flujo" aria-label="El mismo proceso aplicado a un ejemplo">
+            <li data-id="paso-01"><strong>01 · Entrada</strong></li>
+            <li data-id="paso-02"><strong>02 · Proceso</strong></li>
+            <li data-id="paso-03"><strong>03 · Resultado</strong></li>
+          </ol>
+          <div class="muestra-visual">
+            <figure>
+              <!-- Sustituye este esquema por una captura local con texto alternativo y fuente. -->
+              <svg viewBox="0 0 480 190" role="img" aria-labelledby="esquema-titulo esquema-desc">
+                <title id="esquema-titulo">Ejemplo ilustrativo de entrada, proceso y resultado</title>
+                <desc id="esquema-desc">Tres bloques conectados representan datos que se procesan para obtener un resultado. No representa resultados de una investigación.</desc>
+                <g fill="#fff" stroke="#173864" stroke-width="2">
+                  <rect x="15" y="55" width="125" height="80" rx="10"/>
+                  <rect x="177" y="55" width="125" height="80" rx="10"/>
+                  <rect x="340" y="55" width="125" height="80" rx="10"/>
+                  <path d="M140 95h32m-10-8 10 8-10 8M302 95h32m-10-8 10 8-10 8" fill="none"/>
+                </g>
+                <g fill="#173864" font-family="sans-serif" font-size="21" text-anchor="middle">
+                  <text x="77" y="103">Datos</text><text x="240" y="103">Proceso</text><text x="402" y="103">Resultado</text>
+                </g>
+              </svg>
+              <figcaption>Esquema ilustrativo de la plantilla. Sustituye por una evidencia real y explica su fuente.</figcaption>
+            </figure>
+            <div class="ejemplo-codigo">
+              <h3>Ejemplo de programación</h3>
+              <p>Normalizar texto: entrada → transformación → salida.</p>
+              <pre><code class="language-python" data-trim data-line-numbers="1-3|2|3">def normalizar(texto):
+    limpio = texto.strip()
+    return limpio.lower()</code></pre>
+            </div>
+          </div>
+          <aside class="notes">Este es un ejemplo didáctico, no un resultado del trabajo. Explica el esquema y luego el código: primero se quitan espacios y después se convierte a minúsculas. Avanza para destacar cada línea. En trabajos sin programación, reemplaza el código por la explicación de una evidencia real.</aside>
+      </section>
+
+        <!-- Lámina 6: Comparativa -->
+        <section id="comparativa" data-expositor="grupo" data-transition="fade">
+          <h2><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-scale-balanced"></use></svg><span>Análisis Comparativo</span></h2>
+          <table class="comparativa">
+            <caption class="etiqueta">Compara ambos enfoques con los mismos criterios.</caption>
+            <thead><tr><th scope="col">Criterio</th><th scope="col">Enfoque A</th><th scope="col">Enfoque B</th></tr></thead>
+            <tbody>
+              <tr class="fragment custom foco" data-fragment-index="0"><th scope="row">Recursos</th><td>Describe lo necesario.</td><td>Describe lo necesario.</td></tr>
+              <tr class="fragment custom foco" data-fragment-index="1"><th scope="row">Ventajas</th><td>Indica el aporte principal.</td><td>Indica el aporte principal.</td></tr>
+              <tr class="fragment custom foco" data-fragment-index="2"><th scope="row">Limitaciones</th><td>Señala las condiciones de uso.</td><td>Señala las condiciones de uso.</td></tr>
+            </tbody>
+          </table>
+          <p class="clave"><strong>Punto clave:</strong> justifica la elección con evidencia.</p>
+          <aside class="notes">Explica los criterios antes de comparar. Usa evidencia equivalente para ambos enfoques. Justifica tu elección y reconoce sus limitaciones; no inventes cifras.</aside>
+      </section>
+
+        <!-- Lámina 7: Conclusiones -->
+        <section id="conclusiones" data-expositor="grupo" data-transition="fade">
+          <h2><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-circle-check"></use></svg><span>Conclusiones Estratégicas</span></h2>
+          <p class="pregunta">¿Qué aporta el trabajo al problema inicial?</p>
+          <div class="cierre-resultados">
+            <div class="resultado-modelo">
+              <p class="rotulo-modelo"><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-chart-column"></use></svg>Modelo de resultado</p>
+              <p class="valor-resultado">—</p>
+              <p><strong>Dato por completar</strong></p>
+              <p class="detalle-resultado">Añade una cifra verificada, su unidad, significado y fuente.</p>
+            </div>
+            <div class="plan-modelo">
+              <p class="rotulo-modelo"><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-calendar-days"></use></svg>Modelo de próximos pasos</p>
+              <ol class="cronologia">
+                <li><strong>Planificar</strong><span>Define la acción y el responsable.</span></li>
+                <li><strong>Ejecutar</strong><span>Indica el plazo y los recursos.</span></li>
+                <li><strong>Evaluar</strong><span>Establece cómo comprobar el avance.</span></li>
+              </ol>
+            </div>
+          </div>
+          <aside class="notes">Retoma la pregunta inicial. Estos diseños son modelos: reemplázalos con un resultado confirmado y un plan pertinente. Si el trabajo no tiene datos cuantitativos, sustituye la cifra por un hallazgo cualitativo. Explica su alcance y limitaciones; no inventes cifras, fechas ni responsables.</aside>
+      </section>
+
+      <!-- Lámina 8: Referencias (Horizontal) -->
+      <section id="referencias" data-expositor="grupo" data-transition="fade">
+        <h2><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-book"></use></svg><span>Referencias Bibliográficas</span></h2>
+        <div class="bloque">
+          <h3>Fuentes consultadas</h3>
+          <p>Agrega aquí las fuentes consultadas para respaldar la exposición.</p>
+        </div>
+        <!-- referencias:inicio -->
+<ul class="referencias-apa"><li>Apellido, N. (Año). <em>Título de la obra</em>. Editorial o institución. [Referencia de ejemplo: reemplazar con una fuente real.]</li></ul>
+<!-- referencias:fin -->
+        <aside class="notes">Menciona las fuentes que más aportaron. Verifica que sean reales y que respalden las afirmaciones. Las referencias se actualizan desde datos/referencias.json al compilar.</aside>
+      </section>
+
+      <!-- Lámina 9: Cierre (Horizontal) -->
+      <section id="cierre" class="cierre institucional-oscura" data-background-color="#173864" data-state="fondo-institucional" data-expositor="" data-transition="fade">
+        <h2><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-comments"></use></svg><span>Muchas gracias por su atención</span></h2>
+        <p>Espacio para dudas y preguntas</p>
+        <p class="institucion"><span data-campo="Facultad">Facultad de Tecnología e Innovación</span> &bull; <span data-campo="Institución">Universidad Dr. Andrés Bello</span></p>
+        <aside class="notes">Invita a hacer preguntas. Si una respuesta requiere datos que no tienes, indícalo y señala cómo podrías verificarlos.</aside>
+      </section>
+
+    </div>
+
+    <nav class="ruta-exposicion" aria-label="Etapas de la exposición">
+      <a href="#/reflexion" data-etapa="contexto">Contexto</a><span aria-hidden="true">/</span>
+      <a href="#/desarrollo" data-etapa="desarrollo">Desarrollo</a><span aria-hidden="true">/</span>
+      <a href="#/conclusiones" data-etapa="cierre">Cierre</a>
+    </nav>
+    <!-- Pie de diapositiva institucional -->
+    <footer class="pie">
+      <span class="pie-tema"><span data-campo="Título corto">Tema del proyecto</span></span>
+      <span id="expositor"></span>
+      <span class="pie-der">
+        <span data-campo="Asignatura">Nombre de la asignatura</span>
+      </span>
+    </footer>
+  </div>
+
+  <div class="herramientas" aria-label="Herramientas de exposición">
+    <button type="button" id="pantalla-completa" aria-label="Entrar en pantalla completa" aria-pressed="false"><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-expand"></use></svg><span>Pantalla completa</span></button>
+    <details id="indice-presentacion">
+      <summary><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-list"></use></svg>Índice</summary>
+      <nav aria-label="Índice de diapositivas"><ol>
+        <li><a href="#/portada">Portada</a></li>
+        <li><a href="#/reflexion">Reflexión</a></li>
+        <li><a href="#/conceptos">Conceptos</a></li>
+        <li><a href="#/desarrollo">Desarrollo</a></li>
+        <li><a href="#/aplicaciones">Aplicaciones</a></li>
+        <li><a href="#/comparativa">Comparativa</a></li>
+        <li><a href="#/conclusiones">Conclusiones</a></li>
+        <li><a href="#/referencias">Referencias</a></li>
+        <li><a href="#/cierre">Cierre</a></li>
+      </ol></nav>
+    </details>
+    <details id="ayuda-presentacion">
+      <summary><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-circle-question"></use></svg>Ayuda</summary>
+      <div class="atajos">
+        <p>→ o espacio: avanzar<br>←: retroceder<br>Esc: vista general<br>F: pantalla completa<br>S: notas del expositor<br>B: pausar<br>Ctrl + Shift + F: buscar<br>Alt + clic (Ctrl en Linux): zoom<br>H: ocultar o mostrar herramientas</p>
+        <button type="button" id="reiniciar-presentacion"><svg class="icono-fa" aria-hidden="true" focusable="false"><use href="#fa-rotate-left"></use></svg>Volver a empezar</button>
+        <p class="estado-herramientas" role="status" aria-live="polite"></p>
+        <button type="button" id="iniciar-exposicion">Ocultar herramientas (H)</button>
+      </div>
+    </details>
+  </div>
+
+  <!-- Scripts Reveal.js y Plugins -->
+  <script src="../../vendor/reveal.js/dist/reveal.js"></script>
+  <script src="../../vendor/reveal.js/dist/plugin/zoom.js"></script>
+  <script src="../../vendor/reveal.js/dist/plugin/notes.js"></script>
+  <script src="../../vendor/reveal.js/dist/plugin/search.js"></script>
+  <script src="../../vendor/reveal.js/dist/plugin/highlight.js"></script>
+  <script src="js/presentacion.js"></script>
+  <script src="js/interacciones.js"></script>
+</body>
+</html>

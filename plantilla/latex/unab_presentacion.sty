@@ -1,0 +1,175 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{../plantilla/latex/unab_presentacion}[2026/09/10 Tema Beamer institucional]
+
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+\RequirePackage{booktabs}
+\RequirePackage{fontawesome5}
+\RequirePackage{tikz}
+\RequirePackage{ragged2e}
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{colortbl}
+\RequirePackage{fontspec}
+% Beamer gestiona sus notas al pie; no aplicar el parche de clases article.
+\RequirePackage[patch={item,toc,eqnum}]{microtype}
+\RequirePackage{listings}
+
+\definecolor{unabblue}{HTML}{173864}
+\definecolor{softgray}{HTML}{F2F2F2}
+\definecolor{linegray}{HTML}{D8DEE8}
+\definecolor{codegreen}{HTML}{2E7D32}
+\definecolor{codegray}{HTML}{6E7781}
+\definecolor{codepurple}{HTML}{7B1FA2}
+\definecolor{codebg}{HTML}{F6F8FA}
+
+\lstdefinestyle{unabcode}{
+  backgroundcolor=\color{codebg},
+  commentstyle=\color{codegreen}\itshape,
+  keywordstyle=\color{unabblue}\bfseries,
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\scriptsize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=6pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  frame=single,
+  framerule=0.5pt,
+  rulecolor=\color{linegray}
+}
+\lstset{style=unabcode}
+
+\usetheme{Boadilla}
+\usecolortheme{whale}
+\usefonttheme{professionalfonts}
+
+\setbeamercolor{palette primary}{bg=unabblue, fg=white}
+\setbeamercolor{palette secondary}{bg=unabblue!90, fg=white}
+\setbeamercolor{palette tertiary}{bg=unabblue!80, fg=white}
+\setbeamercolor{structure}{fg=unabblue}
+\setbeamercolor{example text}{fg=unabblue}
+\setbeamercolor{author in head/foot}{bg=unabblue, fg=white}
+\setbeamercolor{title in head/foot}{bg=unabblue, fg=white}
+\setbeamercolor{date in head/foot}{bg=unabblue, fg=white}
+\setbeamercolor{frametitle}{bg=softgray, fg=unabblue}
+\setbeamercolor{block title}{bg=unabblue, fg=white}
+\setbeamercolor{block body}{bg=softgray, fg=black}
+\setbeamercolor{block title example}{bg=unabblue!85, fg=white}
+\setbeamercolor{block body example}{bg=softgray, fg=black}
+
+\setbeamerfont{title}{series=\bfseries,size=\Large}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamerfont{footline}{size=\scriptsize}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\setbeamersize{text margin left=0.8cm, text margin right=0.8cm}
+
+\setbeamertemplate{frametitle}{
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=1.5ex,leftskip=0.8cm,rightskip=0.3cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\newcommand{\TemaFooterPresentacion}{Tema}
+\newcommand{\CursoFooterPresentacion}{Asignatura}
+\newcommand{\IconosPortada}{\faChalkboardTeacher \hspace{0.5cm} \faLaptopCode \hspace{0.5cm} \faUsers}
+
+\newcommand{\setdatosfooter}[2]{%
+  \renewcommand{\TemaFooterPresentacion}{#1}%
+  \renewcommand{\CursoFooterPresentacion}{#2}%
+}
+
+\newcommand{\expositor}[1]{%
+  \setbeamertemplate{footline}{%
+    \leavevmode
+    \hbox{%
+      \begin{beamercolorbox}[wd=.30\paperwidth,ht=3.2ex,dp=1.2ex,center]{author in head/foot}
+        \usebeamerfont{footline}\faBookmark\ \TemaFooterPresentacion
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.40\paperwidth,ht=3.2ex,dp=1.2ex,center]{title in head/foot}
+        \usebeamerfont{footline}\faChalkboardTeacher\ \CursoFooterPresentacion
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.30\paperwidth,ht=3.2ex,dp=1.2ex,right]{date in head/foot}
+        \usebeamerfont{footline}\faUser\ #1 \hspace*{1em} \faHashtag\ \insertframenumber{} / \inserttotalframenumber\hspace*{1.5ex}
+      \end{beamercolorbox}%
+    }
+    \vskip0pt
+  }%
+}
+
+\newcommand{\portadainstitucional}{%
+  {%
+  \setbeamertemplate{footline}{}
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north west,xshift=0.55cm,yshift=-0.35cm] at (current page.north west)
+      {\includegraphics[width=1.9cm,height=1.2cm,keepaspectratio]{../assets/institucional/isotipo-azul.png}};
+      \node[anchor=north east,xshift=-0.55cm,yshift=-0.35cm] at (current page.north east)
+      {\includegraphics[width=1.9cm,height=1.2cm,keepaspectratio]{../assets/institucional/logo-facultad.png}};
+      \fill[unabblue] (current page.south west) rectangle ([yshift=0.12cm]current page.south east);
+    \end{tikzpicture}
+
+    \vspace*{-0.6cm}
+
+    \begin{center}
+      {\color{unabblue!65}\small \IconosPortada} \\[0.12cm]
+      {\color{unabblue}\bfseries\fontsize{18pt}{22pt}\selectfont \TituloTrabajo \par}
+      \vspace{0.1cm}
+      {\color{unabblue}\fontsize{9.5pt}{11pt}\selectfont \SubtituloTrabajo \par}
+      \vspace{0.08cm}
+      {\color{unabblue}\rule{0.5\textwidth}{0.4pt}}
+    \end{center}
+
+    \vspace{0.05cm}
+
+    \begin{center}
+    \begin{minipage}{0.92\textwidth}
+    \begin{beamercolorbox}[rounded=true,wd=\textwidth,sep=0.15cm,left]{block body}
+      {\scriptsize\textcolor{unabblue}{\textbf{\faChalkboardTeacher \ Asignatura:}} \Asignatura} \hfill
+      {\scriptsize\textcolor{unabblue}{\textbf{\faUserTie \ Docente:}} \Docente} \\[0.08cm]
+      {\scriptsize\textcolor{unabblue}{\textbf{\faUsers \ Grupo:}} \Grupo} \\
+      \vspace{0.06cm}
+      {\fontsize{7.5pt}{9.5pt}\selectfont
+      \begin{tabularx}{\dimexpr\linewidth-0.3cm\relax}{@{}Xl@{}}
+        \Integrantes
+      \end{tabularx}}
+    \end{beamercolorbox}
+    \end{minipage}
+    \end{center}
+
+    \vspace{0.15cm}
+
+    \begin{center}
+      {\scriptsize \textcolor{unabblue}{\faIcon{map-marker-alt}} \LugarFecha}\\[0.1cm]
+      \includegraphics[height=1.3cm,keepaspectratio]{../assets/institucional/acreditacion.png}
+    \end{center}
+  \end{frame}
+  }%
+}
+
+\newcommand{\cierreinstitucional}[1][Muchas gracias por su atención]{%
+  \expositor{\Grupo}
+  \begin{frame}[plain]
+    \begin{center}
+      \vspace{1.5cm}
+      {\color{unabblue}\Huge \faHandshake} \\
+      \vspace{0.5cm}
+      {\color{unabblue}\huge \bfseries #1 \par}
+      \vspace{0.3cm}
+      {\color{unabblue}\large Espacio para dudas y preguntas \par}
+      \vfill
+      {\scriptsize \textcolor{unabblue!80}{\Facultad \textperiodcentered\ \Institucion}}
+    \end{center}
+  \end{frame}
+}

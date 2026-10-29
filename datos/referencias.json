@@ -1,0 +1,14 @@
+{
+  "estilo": "APA 7",
+  "referencias": [
+    {
+      "id": "fuente",
+      "orden": "Apellido, N.",
+      "autor_parentetico": "Apellido",
+      "autor_narrativo": "Apellido",
+      "anio": "Año",
+      "referencia": "Apellido, N. (Año). *Título de la obra*. Editorial o institución.",
+      "ejemplo": true
+    }
+  ]
+}

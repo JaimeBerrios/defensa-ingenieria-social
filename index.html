@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plantilla académica UNAB para preparar reportes y presentaciones PDF y web, con recursos locales y guías de uso.">
+  <title>Plantilla académica UNAB</title>
+  <link rel="icon" type="image/png" href="assets/institucional/isotipo-blanco.png">
+  <script src="web/portal/js/tema.js"></script>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/solid.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/brands.min.css">
+  <link rel="stylesheet" href="web/portal/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+        <span>Plantilla <strong>UNAB</strong></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNav" aria-controls="mainNav"
+              aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#instalacion">Instalación</a></li>
+          <li class="nav-item"><a class="nav-link" href="#clonar">Clonar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#compilar">Compilar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#flujo">Flujo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#personalizar">Personalizar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#estructura">Estructura</a></li>
+          <li class="nav-item"><a class="nav-link" href="#errores">Ayuda</a></li>
+          <li class="nav-item">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar a modo claro" title="Cambiar tema">
+              <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="contenido-principal" tabindex="-1">
+    <header id="inicio" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5 hero-layout">
+          <div class="col-lg-7">
+            <span class="eyebrow"><i class="fa-solid fa-circle" aria-hidden="true"></i> Plantilla académica UNAB</span>
+            <h1 class="display-3 fw-bold mt-3">Tu reporte, listo para tomar forma.</h1>
+            <p class="hero-copy mt-4 mb-4">
+              Completa <code>datos/datos.md</code> y ejecuta <code>python compilar.py</code> para generar únicamente el reporte. Añade <code>--con-presentacion</code> cuando también quieras las diapositivas PDF y web.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-primary btn-lg rounded-pill px-4" href="pdf/reporte.pdf" target="_blank" rel="noopener">Abrir reporte <i class="fa-solid fa-arrow-up-right-from-square ms-2" aria-hidden="true"></i></a>
+              <a class="btn btn-ghost btn-lg rounded-pill px-4" href="#instalacion">Comenzar con la guía <i class="fa-solid fa-arrow-down ms-2" aria-hidden="true"></i></a>
+            </div>
+            <div class="entregables-secundarios mt-3" aria-label="Presentaciones opcionales">
+              <span>¿También vas a exponer?</span>
+              <a href="pdf/presentacion.pdf" target="_blank" rel="noopener">Presentación PDF</a>
+              <a href="web/presentacion/index.html" target="_blank" rel="noopener">Presentación web</a>
+            </div>
+            <div class="hero-stats d-flex flex-wrap gap-4 gap-md-5 mt-5">
+              <div><strong>VS Code</strong><span>Flujo guiado</span></div>
+              <div><strong>Carta + 16:9</strong><span>Reporte y diapositivas</span></div>
+              <div><strong>3</strong><span>Entregables</span></div>
+            </div>
+            <div class="quick-check mt-4">
+              <span><i class="fa-solid fa-check" aria-hidden="true"></i> Logos incluidos</span>
+              <span><i class="fa-solid fa-check" aria-hidden="true"></i> UTF-8 y tildes</span>
+              <span><i class="fa-solid fa-check" aria-hidden="true"></i> PDF en <code>pdf/</code></span>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="vistas-previas" aria-label="Vistas previas reales de la plantilla">
+              <figure class="preview-reporte">
+                <a href="pdf/reporte.pdf" target="_blank" rel="noopener"><img src="assets/contenido/vistas-previas/reporte.png" width="657" height="850" alt="Portada del reporte: logos UNAB, título y tabla de integrantes de ejemplo." fetchpriority="high"></a>
+                <figcaption><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Reporte · tamaño carta</figcaption>
+              </figure>
+              <figure class="preview-presentacion">
+                <a href="pdf/presentacion.pdf" target="_blank" rel="noopener"><img src="assets/contenido/vistas-previas/presentacion.png" width="850" height="479" alt="Portada de la presentación PDF con identidad UNAB y datos de ejemplo."></a>
+                <figcaption><i class="fa-solid fa-display" aria-hidden="true"></i> Presentación · 16:9</figcaption>
+              </figure>
+            </div>
+            <p class="preview-nota">Capturas de los PDF de ejemplo. Sustituye los datos antes de entregar.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="instalacion" class="section-block py-5">
+      <div class="container py-5">
+        <div class="row g-4 align-items-start mb-4">
+          <div class="col-lg-5">
+            <span class="section-kicker">Instalación</span>
+            <h2 class="display-6 fw-bold mt-2">Qué debes descargar</h2>
+            <p class="section-copy">
+              Necesitas Python 3.9 o posterior. VS Code y Git facilitan la edición y el control de versiones. El script prepara Tectonic automáticamente.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <div id="installGrid" class="row g-3"></div>
+          </div>
+        </div>
+        <div class="sistema-selector mb-3">
+          <label for="commandSystem">Comandos para</label>
+          <select id="commandSystem" class="form-select"><option value="unix">Linux / macOS · python3</option><option value="windows">Windows · python</option></select>
+          <span>Ejecuta los comandos desde la raíz del proyecto.</span>
+        </div>
+        <div class="code-panel">
+          <code>git --version</code>
+          <code>python --version</code>
+        </div>
+        <div class="note-panel mt-4">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <p>La primera compilación requiere conexión. Tectonic se guarda en la carpeta de datos del usuario y se reutiliza entre proyectos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="clonar" class="section-block section-alt py-5">
+      <div class="container py-5">
+        <span class="section-kicker">Git y trabajo en equipo</span>
+        <h2 class="display-6 fw-bold mt-2">Descargar la plantilla y comenzar tu proyecto</h2>
+        <p class="section-copy">Una rama te permite trabajar en tu proyecto por separado y conservar la versión base de la plantilla. En los comandos, cambia <code>nombra-tu-rama</code> por un nombre corto para tu trabajo, por ejemplo <code>proyecto-redes</code>. Usa el mismo nombre en todos los pasos.</p>
+        <div class="note-panel my-4"><i class="fa-solid fa-circle-info" aria-hidden="true"></i><p>Primero instala Git. Si estás comenzando, elige HTTPS para descargar. Usa SSH si ya configuraste una clave de acceso en GitHub. Para subir cambios necesitas una cuenta con permiso para modificar este proyecto. Si GitHub te pide identificarte, sigue el inicio de sesión de tu herramienta; la contraseña de tu cuenta no sirve como contraseña de Git.</p></div>
+        <article class="info-card mb-4">
+          <h3>1. Descargar una copia de la plantilla</h3>
+          <p>Abre la terminal, donde escribirás los comandos. En VS Code está en el menú Terminal → Nueva terminal. Ubícate en la carpeta donde quieras guardar el proyecto y ejecuta solo una de estas dos opciones. Git creará una carpeta llamada Plantilla-Documentos.</p>
+<div class="row g-3"><div class="col-lg-6"><h4 class="h6">Con HTTPS</h4><div class="code-panel my-3"><code>git clone https://github.com/JaimeBerrios/Plantilla-Documentos.git</code></div></div><div class="col-lg-6"><h4 class="h6">Con SSH</h4><div class="code-panel my-3"><code>git clone git@github.com:JaimeBerrios/Plantilla-Documentos.git</code></div></div></div>
+          <h3 class="mt-4">2. Entrar a la carpeta descargada</h3>
+<div class="code-panel my-3"><code>cd Plantilla-Documentos</code></div>
+          <h3 class="mt-4">3. Comprobar dónde vas a trabajar</h3>
+          <p>El primer comando muestra el nombre de la rama donde estás. Para comenzar desde la plantilla base debe decir <code>main</code>. El segundo muestra si cambiaste algún archivo. Si acabas de descargar la plantilla y aparece otra rama, escribe <code>git switch main</code>. Si ya habías editado archivos, guarda esos cambios con un commit antes de cambiar de rama; el ejemplo del final explica cómo hacerlo.</p>
+<div class="code-panel my-3"><code>git branch --show-current</code><code>git status</code></div>
+          <h3 class="mt-4">4. Crear la rama para tu trabajo</h3>
+          <p>Este comando crea la rama y te deja trabajando en ella. Solo una persona del equipo debe crearla. Si un compañero ya la subió a GitHub, ve al apartado “Trabajar con tus compañeros”.</p>
+<div class="code-panel my-3"><code>git switch -c nombra-tu-rama</code></div>
+          <h3 class="mt-4">5. Confirmar que estás en tu rama</h3>
+<div class="code-panel my-3"><code>git branch</code></div>
+          <p>El símbolo <code>*</code> debe aparecer junto al nombre de tu rama:</p>
+          <pre class="mb-0">  main
+* nombra-tu-rama</pre>
+          <h3 class="mt-4">6. Subir tu rama a GitHub</h3>
+<div class="code-panel my-3"><code>git push -u origin nombra-tu-rama</code></div>
+          <p>Esto permite que tus compañeros encuentren la rama en GitHub. La opción <code>-u</code> recuerda dónde subir los próximos cambios; después podrás usar simplemente <code>git push</code>.</p>
+        </article>
+        <div class="note-panel mb-4"><i class="fa-solid fa-code-branch" aria-hidden="true"></i><p><strong>La plantilla base se conserva.</strong> Este comando sube tu rama a GitHub. Tus cambios solo llegarán a <code>main</code> si después alguien decide unirlos a esa rama. Antes de editar o subir archivos, comprueba con <code>git status</code> que estás en la rama de tu proyecto.</p></div>
+        <h3 class="h4 mt-5">Trabajar con tus compañeros</h3>
+        <p>Cuando una persona haya subido la rama, los demás pueden descargarla. Elijan una de estas opciones y usen el nombre de rama que acordó el equipo.</p>
+        <details class="arbol-carpetas mt-3" open>
+          <summary>Opción 1 · Descargar la rama del equipo (recomendada)</summary>
+          <div class="mt-3"><div class="row g-3"><div class="col-lg-6"><h4 class="h6">Con HTTPS</h4><div class="code-panel my-3"><code>git clone -b nombra-tu-rama --single-branch https://github.com/JaimeBerrios/Plantilla-Documentos.git</code></div></div><div class="col-lg-6"><h4 class="h6">Con SSH</h4><div class="code-panel my-3"><code>git clone -b nombra-tu-rama --single-branch git@github.com:JaimeBerrios/Plantilla-Documentos.git</code></div></div></div><div class="code-panel my-3"><code>cd Plantilla-Documentos</code></div><p>Estos comandos te dejan en la rama del equipo, lista para trabajar. La opción <code>--single-branch</code> descarga esa rama con su historial de cambios, sin preparar las demás ramas.</p></div>
+        </details>
+        <details class="arbol-carpetas mt-3">
+          <summary>Opción 2 · Descargar la plantilla y luego entrar a la rama del equipo</summary>
+          <div class="mt-3"><div class="row g-3"><div class="col-lg-6"><h4 class="h6">Con HTTPS</h4><div class="code-panel my-3"><code>git clone https://github.com/JaimeBerrios/Plantilla-Documentos.git</code></div></div><div class="col-lg-6"><h4 class="h6">Con SSH</h4><div class="code-panel my-3"><code>git clone git@github.com:JaimeBerrios/Plantilla-Documentos.git</code></div></div></div><div class="code-panel my-3"><code>cd Plantilla-Documentos</code><code>git switch nombra-tu-rama</code></div></div>
+        </details>
+        <details class="arbol-carpetas mt-3">
+          <summary>Opción 3 · Ya tengo la carpeta, pero no encuentro la rama del equipo</summary>
+          <div class="mt-3"><p>Abre la terminal dentro de Plantilla-Documentos. El primer comando consulta las ramas que hay en GitHub. El segundo prepara la rama del equipo en tu computadora y te deja dentro de ella. Sirve tanto con HTTPS como con SSH.</p><div class="code-panel my-3"><code>git fetch origin</code><code>git switch -c nombra-tu-rama --track origin/nombra-tu-rama</code></div><p>Si ya tienes esa rama en tu computadora, basta con <code>git switch nombra-tu-rama</code>. Si descargaste otra rama usando <code>--single-branch</code>, ejecuta primero el siguiente comando y después los dos anteriores:</p><div class="code-panel my-3"><code>git remote set-branches --add origin nombra-tu-rama</code></div></div>
+        </details>
+        <h3 class="h4 mt-5">Comandos para el trabajo diario</h3>
+        <div class="table-responsive"><table class="table">
+          <caption>Qué hace cada comando en la rama de tu proyecto</caption>
+          <thead><tr><th scope="col">Comando</th><th scope="col">Función</th></tr></thead>
+          <tbody>
+            <tr><td><code>git status</code></td><td>Muestra en qué rama estás y qué archivos cambiaste.</td></tr>
+            <tr><td><code>git diff</code></td><td>Muestra lo que agregaste o quitaste en los archivos.</td></tr>
+            <tr><td><code>git add .</code></td><td>Selecciona los cambios que vas a guardar. Ejecútalo desde Plantilla-Documentos y revisa antes que no incluyas archivos personales.</td></tr>
+            <tr><td><code>git diff --cached</code></td><td>Muestra los cambios seleccionados para guardar.</td></tr>
+            <tr><td><code>git commit -m "Mensaje"</code></td><td>Guarda en tu computadora un punto del historial, llamado commit. Cambia “Mensaje” por una descripción de lo que hiciste.</td></tr>
+            <tr><td><code>git push</code></td><td>Sube a GitHub los cambios que ya guardaste con commit.</td></tr>
+            <tr><td><code>git pull --ff-only</code></td><td>Trae los cambios de tus compañeros. Se detiene si hay cambios de ambos lados que necesitan revisarse juntos.</td></tr>
+          </tbody>
+        </table></div>
+        <p>Antes de empezar, comprueba que no tienes cambios sin guardar y trae lo que hayan subido tus compañeros:</p>
+<div class="code-panel my-3"><code>git status</code><code>git pull --ff-only</code></div>
+        <p>Cuando termines de editar, revisa tus cambios, guárdalos con una descripción y súbelos a GitHub. Ejecuta los comandos en este orden:</p>
+<div class="code-panel my-3"><code>git diff</code><code>git add .</code><code>git diff --cached</code><code>git commit -m &quot;docs(reporte): actualiza el contenido del proyecto&quot;</code><code>git push</code></div>
+        <p>Si Git no te deja descargar o subir porque un compañero también hizo cambios, revisen juntos el mensaje y acuerden cómo combinarlos. No uses <code>git push --force</code>: podría reemplazar cambios del equipo.</p>
+        <a href="docs/uso/clonacion-y-ramas.md">Abrir la versión escrita del tutorial</a>
+      </div>
+    </section>
+
+    <section id="compilar" class="section-block section-alt py-5">
+      <div class="container py-5">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5">
+            <span class="section-kicker">VS Code</span>
+            <h2 class="display-6 fw-bold mt-2">Cómo compilar</h2>
+            <p class="section-copy">
+              La carpeta <code>.vscode/</code> incluye una tarea que ejecuta el mismo compilador y guarda el reporte en <code>pdf/reporte.pdf</code>. La tarea de presentación se elige por separado.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <div class="steps-list">
+              <div><strong>1</strong><span>Completa <code>datos/datos.md</code> y edita los documentos.</span></div>
+              <div><strong>2</strong><span>Presiona <code>Ctrl + Shift + B</code> en VS Code.</span></div>
+              <div><strong>3</strong><span>Espera la compilación del reporte.</span></div>
+              <div><strong>4</strong><span>Revisa los registros en <code>.build/</code> si aparece un error.</span></div>
+              <div><strong>5</strong><span>Abre <code>pdf/reporte.pdf</code>.</span></div>
+            </div>
+            <div class="code-panel mt-4">
+              <code>python compilar.py</code>
+              <code>python compilar.py --sin-red</code>
+              <code>python compilar.py --con-presentacion</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flujo" class="section-block py-5">
+      <div class="container py-5">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5">
+            <span class="section-kicker">Flujo recomendado</span>
+            <h2 class="display-6 fw-bold mt-2">Preparar un trabajo nuevo</h2>
+            <p class="section-copy">
+              Sigue este orden para evitar problemas de rutas, logos, paquetes o archivos sin compilar.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <div id="workflowGrid" class="row g-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="personalizar" class="section-block py-5">
+      <div class="container py-5">
+        <span class="section-kicker">Personalización</span>
+        <h2 class="display-6 fw-bold mt-2 mb-4">Tildes, logos e iconos</h2>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="info-card">
+              <span>Español</span>
+              <h3>Tildes directas</h3>
+              <p>Usa <code>á</code>, <code>é</code>, <code>í</code>, <code>ó</code>, <code>ú</code>, <code>ñ</code>, <code>¿</code> y <code>¡</code> en <code>documentos/presentacion.tex</code>. Guarda los archivos en UTF-8.</p>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="info-card">
+              <span>Logos</span>
+              <h3>Portada automática</h3>
+              <p>Conserva los logos de <code>assets/institucional/</code>. Agrega gráficos e imágenes del trabajo en <code>assets/contenido/imagenes/</code>.</p>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="info-card">
+              <span>Font Awesome</span>
+              <h3>Iconos en LaTeX</h3>
+              <p>Usa comandos como <code>\faUser</code>, <code>\faCloud</code>, <code>\faLightbulb</code>, <code>\faCheckCircle</code> y <code>\faChartLine</code>.</p>
+            </article>
+          </div>
+        </div>
+        <div class="code-panel mt-4">
+          <code>\begin{frame}{\faLightbulb \ Idea principal}</code>
+          <code>\item \textbf{\faCheckCircle \ Punto clave:} descripción breve.</code>
+          <code>\renewcommand{\IconosPortada}{\faCloud \hspace{0.5cm} \faServer}</code>
+        </div>
+        <article class="iconos-web mt-4 info-card">
+          <span>Font Awesome Free · web</span>
+          <h3 class="mt-2">Amplía tu selección de iconos</h3>
+          <p>Descarga SVG oficiales cuando hagan falta. Se guardan con su licencia en <code>assets/iconos/fontawesome/solid/</code> y siguen funcionando sin conexión.</p>
+          <div class="code-panel mt-3"><code>python -m herramientas.iconos --descargar microscope shield-halved --sincronizar</code></div>
+          <p class="mt-3">La sincronización incorpora los iconos a la biblioteca de las diapositivas; después puedes colocarlos junto al texto. Consulta la <a href="docs/uso/personalizacion.md">guía de personalización</a>.</p>
+        </article>
+        <div class="note-panel mt-4">
+          <i class="fa-solid fa-keyboard" aria-hidden="true"></i>
+          <p>Si los acentos se ven mal, guarda <code>documentos/presentacion.tex</code> como UTF-8 desde la barra inferior de VS Code.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="estructura" class="section-block section-alt py-5">
+      <div class="container py-5">
+        <span class="section-kicker">Archivos clave</span>
+        <h2 class="display-6 fw-bold mt-2 mb-4">Qué debes editar</h2>
+        <div id="fileGrid" class="row g-4"></div>
+        <details class="arbol-carpetas mt-4">
+          <summary><i class="fa-solid fa-folder-tree" aria-hidden="true"></i> Explorar la estructura completa</summary>
+          <pre aria-label="Árbol de carpetas">Plantilla-Documentos/
+├── index.html             Portal principal
+├── compilar.py            Entrada única de compilación
+├── datos/                 datos.md y referencias.json
+├── documentos/            Fuentes LaTeX, secciones y anexos
+├── plantilla/latex/       Estilos institucionales
+├── web/
+│   ├── portal/            Estilos y scripts del portal
+│   └── presentacion/      Diapositivas, estilos e interacciones
+├── assets/
+│   ├── institucional/     Logos y acreditación
+│   ├── fuentes/           Firma tipográfica
+│   ├── iconos/            SVG oficiales y licencias
+│   └── contenido/         Imágenes, gráficos, evidencias y vistas previas
+├── herramientas/          Compilación, validación e iconos
+├── vendor/                Dependencias locales y licencias
+├── ejemplos/              Demo de referencia
+├── docs/                  Índice y mapa de estructura
+│   ├── uso/               Clonación, uso y personalización
+│   └── mantenimiento/     Registro de verificación
+├── pdf/                   Entregables generados
+├── tests/                 Pruebas automatizadas
+└── .build/                Temporales fuera de Git</pre>
+        </details>
+        <div class="documentacion-links mt-4" aria-label="Documentación de la plantilla">
+          <a href="docs/README.md">Índice de documentación</a>
+          <a href="docs/uso/lista-de-entrega.md">Lista de entrega</a>
+          <a href="docs/mantenimiento/validacion-automatica.md">Validación automática</a>
+          <a href="docs/mantenimiento/licencias.md">Licencias y recursos</a>
+          <a href="docs/uso/guia-de-uso.md">Guía de uso <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          <a href="docs/uso/personalizacion.md">Personalización</a>
+          <a href="docs/estructura.md">Estructura y mantenimiento</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="errores" class="section-block py-5">
+      <div class="container py-5">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-5">
+            <span class="section-kicker">Soporte</span>
+            <h2 class="display-6 fw-bold mt-2">Errores comunes</h2>
+            <p class="section-copy">
+              Revisa el mensaje del compilador y los registros de <code>.build/</code>. Si falla un documento, se conservan los PDF anteriores.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <div class="trouble-list">
+              <article>
+                <h3><code>python</code> no se reconoce</h3>
+                <p>Instala Python 3.9 o posterior, habilita su acceso desde la terminal y vuelve a abrir VS Code.</p>
+              </article>
+              <article>
+                <h3>Falta un paquete</h3>
+                <p>Ejecuta <code>python compilar.py</code> con conexión para que Tectonic descargue los paquetes necesarios.</p>
+              </article>
+              <article>
+                <h3>Falta un dato obligatorio</h3>
+                <p>Completa el campo indicado en <code>datos/datos.md</code> y conserva sus encabezados y etiquetas.</p>
+              </article>
+              <article>
+                <h3>La primera compilación no tiene conexión</h3>
+                <p>Conéctate para descargar Tectonic y sus paquetes. Usa <code>--sin-red</code> cuando ya estén disponibles.</p>
+              </article>
+              <article>
+                <h3>No aparece el PDF actualizado</h3>
+                <p>Confirma que <code>python compilar.py</code> terminó correctamente. Ante un fallo, los PDF anteriores siguen en <code>pdf/</code>.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-signature">
+        <span class="footer-kicker">Diseño y desarrollo</span>
+        <a class="signature-name" href="https://www.linkedin.com/in/jaimeberrios08/" target="_blank" rel="noopener noreferrer">Jaime Berrios</a>
+        <p>Plantilla UNAB para crear presentaciones y reportes académicos con una identidad visual cuidada.</p>
+      </div>
+      <div class="footer-connect">
+        <span class="connect-label">Conecta conmigo</span>
+        <nav class="social-links" aria-label="Redes sociales de Jaime Berrios">
+          <a href="https://www.linkedin.com/in/jaimeberrios08/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/JaimeBerrios" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.behance.net/jaimeberrios" target="_blank" rel="noopener noreferrer" aria-label="Behance" title="Behance">
+            <i class="fa-brands fa-behance" aria-hidden="true"></i>
+            <span>Behance</span>
+          </a>
+          <a href="https://www.facebook.com/JaimeBerrios08/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/jaimeberrios08/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.youtube.com/@jaimeberrios08/" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            <span>YouTube</span>
+          </a>
+          <a href="https://x.com/JaimeBerrios08" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" title="X / Twitter">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            <span>X</span>
+          </a>
+          <a href="https://www.pinterest.com/JaimeBerrios08/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" title="Pinterest">
+            <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+            <span>Pinterest</span>
+          </a>
+          <a href="https://www.twitch.tv/jaimeberrios08" target="_blank" rel="noopener noreferrer" aria-label="Twitch" title="Twitch">
+            <i class="fa-brands fa-twitch" aria-hidden="true"></i>
+            <span>Twitch</span>
+          </a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="currentYear"></span> Plantilla UNAB</span>
+        <span>LaTeX, Python y Reveal.js · recursos locales</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="portalStatus" class="visually-hidden" role="status" aria-live="polite"></div>
+  <noscript><p class="container py-4">Activa JavaScript para copiar comandos y usar las guías interactivas. Puedes abrir el <a href="pdf/reporte.pdf">reporte</a> o consultar la <a href="docs/uso/guia-de-uso.md">guía de uso</a>.</p></noscript>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="web/portal/js/app.js"></script>
+</body>
+</html>

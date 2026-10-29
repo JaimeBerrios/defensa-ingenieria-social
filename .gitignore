@@ -1,0 +1,51 @@
+# Archivos auxiliares generados por LaTeX
+*.aux
+*.bcf
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# Directorios temporales de compilación
+_minted-*/
+build/
+output/
+.build/
+
+# Copias de seguridad y archivos temporales
+*.bak
+*.tmp
+*~
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# El PDF final se conserva intencionalmente en el repositorio.
+!pdf/
+!pdf/*.pdf
+
+# Caché de Python
+__pycache__/
+*.pyc
+
+# Configuración local de agentes y servicios; no forma parte de la plantilla
+.agents/
+.codex/
+.aws/
+.venv/
+.env
+.env.*
+!.env.example
